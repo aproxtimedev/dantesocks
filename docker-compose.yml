@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  dante-server:
+    container_name: dante-container
+    image: aproxtimedev/dantesocks:0.1.0
+    env_file:
+      - .env
+    ports:
+      - 1080:1080
+    volumes:
+      - ./sockd.conf:/sockd.conf
