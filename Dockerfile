@@ -11,4 +11,6 @@ ENTRYPOINT [ "/docker-entrypoint.d/dante-server.sh" ]
 
 EXPOSE 1080
 
+RUN rm -vrf /var/cache/apk/*
+
 CMD ["/usr/sbin/sockd"]
